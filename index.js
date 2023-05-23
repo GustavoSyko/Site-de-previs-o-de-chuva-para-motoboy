@@ -3,32 +3,35 @@ function checar() {
     fetch(url)
         .then(response => response.json())
         .then(data => {
+            const chuva = data.results.forecast[0].rain_probability;
             switch (data.results.forecast[0].rain_probability) {
 
                 case 0:
-                   
-                    window.alert ("Não");
+                    document.getElementById("texto").innerHTML = `Não, a probabilidade de chuva é ${chuva} %`
                     break;
 
 
                 case 25:
-                   
+                    document.getElementById("texto").innerHTML = "Não"
+
                     break;
 
 
                 case 50:
-                    
+                    document.getElementById("texto").innerHTML = "Não"
+
 
                     break;
 
 
                 case 75:
-                   
+                    document.getElementById("texto").innerHTML = "Não"
+
                     break;
 
 
                 case 100:
-                    
+                    document.getElementById("texto").innerHTML = "Não"
 
                     break;
 
