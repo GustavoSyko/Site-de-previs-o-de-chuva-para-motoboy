@@ -6,26 +6,29 @@ function checar() {
             switch (data.results.forecast[0].rain_probability) {
 
                 case 0:
-                    console.log("deu certo")
+                   
+                    window.alert ("deu certo");
                     break;
 
 
                 case 25:
-
+                   
                     break;
 
 
                 case 50:
+                    
 
                     break;
 
 
                 case 75:
-
+                   
                     break;
 
 
                 case 100:
+                    
 
                     break;
 
