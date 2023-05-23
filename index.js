@@ -7,7 +7,7 @@ function checar() {
             switch (data.results.forecast[0].rain_probability) {
 
                 case 0:
-                    document.body.style.backgroundImage = 
+                    document.body.style.backgroundImage = ""
                         document.getElementById("texto").innerHTML = `Não, a probabilidade de chuva é ${chuva} %`
                     break;
 
