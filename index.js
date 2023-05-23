@@ -1,17 +1,41 @@
+function checar() {
+    const url = `https://api.hgbrasil.com/weather?format=json-cors&key=f3535208&user_ip=remote`;
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            switch (data.results.forecast[0].rain_probability) {
 
-const url = `https://api.hgbrasil.com/weather?key=f3535208&user_ip=remote`;
+                case 0:
+                    console.log("deu certo")
+                    break;
 
-fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        switch (data.results.forecast[0].rain_probability) {
 
-            case  25:
-                console.log("Deu certo")
-                break;
-        }
-    })
-    .catch(error => {
-        // Trate qualquer erro que possa ocorrer
-        console.error('Ocorreu um erro ao tentar obter os dados da API:', error);
-    });
+                case 25:
+
+                    break;
+
+
+                case 50:
+
+                    break;
+
+
+                case 75:
+
+                    break;
+
+
+                case 100:
+
+                    break;
+
+                default:
+
+                    break;
+            }
+        })
+        .catch(error => {
+            // Trate qualquer erro que possa ocorrer
+            console.error('Ocorreu um erro ao tentar obter os dados da API:', error);
+        });
+}
