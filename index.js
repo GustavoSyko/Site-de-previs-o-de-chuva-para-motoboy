@@ -7,7 +7,7 @@ function checar() {
 
                 case 0:
                    
-                    window.alert ("deu certo");
+                    window.alert ("Não");
                     break;
 
 
