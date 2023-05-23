@@ -7,36 +7,36 @@ function checar() {
             switch (data.results.forecast[0].rain_probability) {
 
                 case 0:
-                    document.body.style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/03%20raios-chuva-clima-ao-vivo-tempo-alerta-previsao-1677503593653.jpg)"
-                        document.getElementById("texto").innerHTML = `Não, a probabilidade de chuva é ${chuva} %`
+                    document.body.style.backgroundImage = "url()";
+                    document.getElementById("texto").innerHTML = `Não, a probabilidade de chuva é ${chuva} %`
                     break;
 
 
                 case 25:
-                    document.body.style.backgroundImage =
-                        document.getElementById("texto").innerHTML = "Não"
+                    document.body.style.backgroundImage = "url()"
+                    document.getElementById("texto").innerHTML = "Não"
 
                     break;
 
 
                 case 50:
-                    document.body.style.backgroundImage =
-                        document.getElementById("texto").innerHTML = "Não"
+                    document.body.style.backgroundImage = "url()"
+                    document.getElementById("texto").innerHTML = "Não"
 
 
                     break;
 
 
                 case 75:
-                    document.body.style.backgroundImage =
-                        document.getElementById("texto").innerHTML = "Não"
+                    document.body.style.backgroundImage = "url()"
+                    document.getElementById("texto").innerHTML = "Não"
 
                     break;
 
 
                 case 100:
-                    document.body.style.backgroundImage =
-                        document.getElementById("texto").innerHTML = "Não"
+                    document.body.style.backgroundImage = "url()"
+                    document.getElementById("texto").innerHTML = "Não"
 
                     break;
 
