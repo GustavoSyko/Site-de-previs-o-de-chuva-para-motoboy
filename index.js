@@ -7,31 +7,36 @@ function checar() {
             switch (data.results.forecast[0].rain_probability) {
 
                 case 0:
-                    document.getElementById("texto").innerHTML = `Não, a probabilidade de chuva é ${chuva} %`
+                    document.body.style.backgroundImage = 
+                        document.getElementById("texto").innerHTML = `Não, a probabilidade de chuva é ${chuva} %`
                     break;
 
 
                 case 25:
-                    document.getElementById("texto").innerHTML = "Não"
+                    document.body.style.backgroundImage =
+                        document.getElementById("texto").innerHTML = "Não"
 
                     break;
 
 
                 case 50:
-                    document.getElementById("texto").innerHTML = "Não"
+                    document.body.style.backgroundImage =
+                        document.getElementById("texto").innerHTML = "Não"
 
 
                     break;
 
 
                 case 75:
-                    document.getElementById("texto").innerHTML = "Não"
+                    document.body.style.backgroundImage =
+                        document.getElementById("texto").innerHTML = "Não"
 
                     break;
 
 
                 case 100:
-                    document.getElementById("texto").innerHTML = "Não"
+                    document.body.style.backgroundImage =
+                        document.getElementById("texto").innerHTML = "Não"
 
                     break;
 
