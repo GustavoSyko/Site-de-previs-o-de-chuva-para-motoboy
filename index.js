@@ -8,6 +8,7 @@ function checar() {
             if (chuva <= 10) {
                 document.getElementById("fontevideo").src ="https://kaupalph.sirv.com/cortados/sky_-_52170%20(1080p).mp4";
                 document.getElementById("videofundo").load();
+                document.getElementById("container").style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/a%20primeira%20e%20pra%20baixo.jpeg?w=300&h=220&scale.option=ignore)";
                 document.getElementById("resultado").innerHTML = `Não, a probabilidade de chuva é de ${chuva} %.`
                 document.getElementById("texto").innerHTML = ""
             }

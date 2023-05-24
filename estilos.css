@@ -20,6 +20,7 @@
         width: 200px;
         height: 150px;
 
+
     }
 
     #consultar {
@@ -39,21 +40,25 @@
     }
 }
 
-/* Estilização para dispositivos com largura menor que 799px(celular)*/
+/* Estilização para dispositivos com largura menor que 700px(celular)*/
 @media only screen and (max-device-width: 700px) {
+ 
     body {
-        background-size: 300px 300px;
         background-color: rgb(94, 94, 94);
         overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
+
     }
 
+    
+    
     #container {
+        
+        
         margin: auto;
-        box-sizing: border-box;
         text-align: center;
         justify-content: center;
         border: 2px solid blue;
@@ -61,6 +66,9 @@
         background-color: rgb(199, 189, 189);
         width: 200px;
         height: 150px;
+        background-size: cover;
+        
+
 
     }
 
@@ -72,10 +80,10 @@
     #videofundo {
         object-fit: cover;
         position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         z-index: -1;
 
     }
