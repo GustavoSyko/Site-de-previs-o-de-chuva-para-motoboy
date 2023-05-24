@@ -1,0 +1,113 @@
+/* TENTANDO COLOCAR NOME NO RODAPÉ */
+
+/* Estilização para dispositivos com largura mínima de 800px(computador-tablet) */
+@media only screen and (min-width: 700px) {
+    body {
+        background-color: rgb(94, 94, 94);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #container {
+        background-size: cover;
+        margin: auto;
+        box-sizing: border-box;
+        text-align: center;
+        justify-content: center;
+        border: 2px solid rgba(0, 0, 0, 0.447);
+        border-radius: 5px;
+        background-color: rgba(199, 189, 189, 0);
+        width: 200px;
+        height: 150px;
+    }
+
+    #consultar {
+        border-radius: 10px;
+        height: 25px;
+        width: 80px;
+    }
+
+    #videofundo {
+        object-fit: cover;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+}
+
+/* Estilização para dispositivos com largura menor que 700px(celular)*/
+@media only screen and (max-device-width: 700px) {
+
+    body {
+        
+        background-color: rgb(94, 94, 94);
+        overflow: hidden;
+
+
+
+    }
+
+    main {
+
+        display: block;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+    }
+
+
+
+
+    #container {
+
+
+        display: block;
+        margin: auto;
+        text-align: center;
+        justify-content: center;
+        border: 2px solid rgba(0, 0, 0, 0.353);
+        border-radius: 5px;
+        background-color: rgba(199, 189, 189, 0);
+        width: 200px;
+        height: 150px;
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+
+    }
+
+    #consultar {
+        border-radius: 30px;
+        border-width: 1px;
+        background-color: rgb(224, 224, 224);
+        height: 25px;
+        width: 80px;
+    }
+
+    #consultar:active {
+        background-color: rgb(86, 86, 86);
+    }
+
+    #videofundo {
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+    }
+}
