@@ -8,6 +8,8 @@ body {
 }
 
 #container {
+    margin: auto;
+    box-sizing: border-box;
     text-align: center;
     justify-content: center;
     border: 2px solid blue;
@@ -25,12 +27,13 @@ body {
 
 #videofundo {
     object-fit: cover;
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
+    
 }
 
 @media only screen and (max-device-width: 400px) {}
