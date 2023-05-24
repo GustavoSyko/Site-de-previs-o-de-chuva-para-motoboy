@@ -4,6 +4,7 @@ function checar() {
         .then(response => response.json())
         .then(data => {
             const chuva = data.results.forecast[0].rain_probability;
+            //Se a porcentagem de chuva for menor ou igual a 10, Dê a seguinte resposta e coloque tal video de fundo
             if (chuva <= 10) {
                 document.getElementById("fontevideo").src ="https://kaupalph.sirv.com/cortados/sky_-_52170%20(1080p).mp4";
                 document.getElementById("videofundo").load();

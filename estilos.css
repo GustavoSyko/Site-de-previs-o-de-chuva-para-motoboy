@@ -1,42 +1,14 @@
-body {
-    background-color: rgb(94, 94, 94);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+/* Estilização para dispositivos com largura mínima de 800px(computador-tablet) */
+@media only screen and (min-width: 700px) {
+    body {
+        background-color: rgb(94, 94, 94);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 
-#container {
-    margin: auto;
-    box-sizing: border-box;
-    text-align: center;
-    justify-content: center;
-    border: 2px solid blue;
-    border-radius: 5px;
-    background-color: rgb(199, 189, 189);
-    width: 200px;
-    height: 150px;
-
-}
-
-#consultar {
-    height: 25px;
-    width: 80px;
-}
-
-#videofundo {
-    object-fit: cover;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-
-}
-
-@media only screen and (min-device-width: 400px) {
     #container {
         margin: auto;
         box-sizing: border-box;
@@ -45,9 +17,66 @@ body {
         border: 2px solid blue;
         border-radius: 5px;
         background-color: rgb(199, 189, 189);
-        width: 540px;
+        width: 200px;
         height: 150px;
 
     }
 
+    #consultar {
+        height: 25px;
+        width: 80px;
+    }
+
+    #videofundo {
+        object-fit: cover;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+
+    }
+}
+
+/* Estilização para dispositivos com largura menor que 799px(celular)*/
+@media only screen and (max-device-width: 700px) {
+    body {
+        background-size: 300px 300px;
+        background-color: rgb(94, 94, 94);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #container {
+        margin: auto;
+        box-sizing: border-box;
+        text-align: center;
+        justify-content: center;
+        border: 2px solid blue;
+        border-radius: 5px;
+        background-color: rgb(199, 189, 189);
+        width: 200px;
+        height: 150px;
+
+    }
+
+    #consultar {
+        height: 25px;
+        width: 80px;
+    }
+
+    #videofundo {
+        object-fit: cover;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+
+    }
 }
