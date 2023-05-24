@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    object-fit: cover;
+    background-size: 100% 100%; 
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@ body {
     position: fixed;
     right: 0;
     bottom: 0;
-    min-width: 100vh;
-    min-height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
     z-index: -1;
 }
