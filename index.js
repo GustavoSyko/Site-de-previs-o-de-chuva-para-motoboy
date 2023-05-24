@@ -5,28 +5,32 @@ function checar() {
         .then(data => {
             const chuva = data.results.forecast[0].rain_probability;
             if (chuva <= 10) {
-                document.getElementById("fontevideo").src ="https://kaupalph.sirv.com/cortados/sky_-_52170%20(1080p).mp4";
+                document.getElementById("fontevideo").src ="https://kaupalph.sirv.com/cortados/pexels-cottonbro-studio-4605197-960x506-25fps.mp4";
                 document.getElementById("videofundo").load();
                 document.getElementById("texto").innerHTML = `Não, a probabilidade de chuva é de ${chuva} %.`
             }
 
             else if (chuva > 10 && chuva <= 30) {
-                document.body.style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/sol%20entre%20nuvens.jpg)"
+                document.getElementById("fontevideo").src ="https://kaupalph.sirv.com/cortados/30%20a%2050.mp4";
+                document.getElementById("videofundo").load();
                 document.getElementById("texto").innerHTML = `Poucas chances,a probabilidade é de ${chuva} % .`
             }
 
             else if (chuva > 30 && chuva <= 50) {
-                document.body.style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/um-casal-com-capa-de-chuva-em-uma-moto-durante-fortes-chuvas-foco-seletivo-e-composicao-de-profundidade-de-campo-muito-rasa_154224-702.avif)"
+                document.getElementById("fontevideo").src ="https://kaupalph.sirv.com/cortados/30%20a%2050.mp4";
+                document.getElementById("videofundo").load();
                 document.getElementById("texto").innerHTML = `Leva a capa! A probabilidade é de ${chuva} %.`
             }
 
             else if (chuva > 50 && chuva <= 80) {
-                document.body.style.backgroundImage = "url()"
+                document.getElementById("fontevideo").src ="https://kaupalph.sirv.com/cortados/cidade%20noite%20chuva%20(2).mp4";
+                document.getElementById("videofundo").load();
                 document.getElementById("texto").innerHTML = `É meu amigo...acho que deu ruim. ${chuva} %.`
             }
 
             else if (chuva > 80 && chuva <= 100) {
-                document.body.style.backgroundImage = "url()"
+                document.getElementById("fontevideo").src ="https://kaupalph.sirv.com/cortados/pexels-the-element-2657691-960x540-30fps.mp4";
+                document.getElementById("videofundo").load();
                 document.getElementById("texto").innerHTML = ""
             }
         })
