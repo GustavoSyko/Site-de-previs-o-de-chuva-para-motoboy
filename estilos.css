@@ -1,6 +1,6 @@
 body {
-    background-image: url(https://kaupalph.sirv.com/Imagens/imagens/pouca%20chuva%20%2C%20verde.jpg);
-    background-size: cover;
+    background-color: black;
+    object-fit: cover;
     overflow: hidden;
     display: flex;
     justify-content: center;
