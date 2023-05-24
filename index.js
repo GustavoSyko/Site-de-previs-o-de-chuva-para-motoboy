@@ -5,8 +5,8 @@ function checar() {
         .then(data => {
             const chuva = data.results.forecast[0].rain_probability;
             if (chuva <= 10) {
-                document.getElementById("fontevideo").src ="url (https://kaupalph.sirv.com/cortados/sky_-_52170%20(1080p).mp4)"
-                document.body.style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/verao-calor-vista-skyline-copan-1.webp)";
+                document.getElementById("fontevideo").src ="url (https://kaupalph.sirv.com/cortados/sky_-_52170%20(1080p).mp4)";
+                document.getElementById("videofundo").load();
                 document.getElementById("texto").innerHTML = `Não, a probabilidade de chuva é de ${chuva} %.`
             }
 
