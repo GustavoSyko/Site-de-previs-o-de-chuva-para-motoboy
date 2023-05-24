@@ -31,3 +31,11 @@ body {
     min-height: 100%;
     z-index: -1;
 }
+@media only screen and (max-device-width: 400px){
+    body{
+        max-width: 399;
+        max-height: 800;
+    }
+
+}
+    
