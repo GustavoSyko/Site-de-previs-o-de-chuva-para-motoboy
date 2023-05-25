@@ -23,12 +23,20 @@
                 src="https://kaupalph.sirv.com/cortados/pexels-cottonbro-studio-4605197-960x506-25fps.mp4"
                 type="video/mp4">
         </video>
+
         <div id="container">
             <h1 id="texto">Vai chover hoje?</h1>
             <button type="button" onclick="checar()" id="consultar">Consultar</button><br>
            <a href="mapa.html"> <button  id="gps">Ver mapa</button></a>
         </div>
         <h3 id="resultado"></h3>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              var video = document.getElementById('videofundo');
+              video.play();
+            });
+          </script>
     </main>
 
     <footer>
