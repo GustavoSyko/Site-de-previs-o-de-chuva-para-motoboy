@@ -8,9 +8,10 @@ function checar() {
             if (chuva <= 10) {
                 document.getElementById("fontevideo").src = "https://kaupalph.sirv.com/cortados/sky_-_52170%20(1080p).mp4";
                 document.getElementById("videofundo").load();
-                document.getElementById("container").style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/a%20primeira%20e%20pra%20baixo.jpeg?w=300&h=220&scale.option=ignore)";
+                document.getElementById("container").style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/a%20primeira%20e%20pra%20baixo.jpeg?w=250&h=150&scale.option=ignore)";
                 document.getElementById("resultado").innerHTML = `Não , probabilidade de chuva é de ${chuva} %.`
                 document.getElementById("consultar").style.display = "none";
+                document.getElementById("gps").style.display = "none";
                 document.getElementById("texto").innerHTML = ""
             }
 
@@ -20,6 +21,7 @@ function checar() {
                 document.getElementById("container").style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/sol%20entre%20nuvens.jpg)";
                 document.getElementById("resultado").innerHTML = `Poucas chances,a probabilidade é de ${chuva} % .`
                 document.getElementById("consultar").style.display = "none";
+                document.getElementById("gps").style.display = "none";
                 document.getElementById("texto").innerHTML = ""
             }
 
@@ -29,6 +31,7 @@ function checar() {
                 document.getElementById("container").style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/celula.jpeg)";
                 document.getElementById("resultado").innerHTML = `Leva a capa! A probabilidade é de ${chuva} %.`
                 document.getElementById("consultar").style.display = "none";
+                document.getElementById("gps").style.display = "none";
                 document.getElementById("texto").innerHTML = ""
             }
 
@@ -38,6 +41,7 @@ function checar() {
                 document.getElementById("container").style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/um-casal-com-capa-de-chuva-em-uma-moto-durante-fortes-chuvas-foco-seletivo-e-composicao-de-profundidade-de-campo-muito-rasa_154224-702.avif)";
                 document.getElementById("resultado").innerHTML = `É meu amigo...acho que deu ruim. ${chuva} %.`
                 document.getElementById("consultar").style.display = "none";
+                document.getElementById("gps").style.display = "none";
                 document.getElementById("texto").innerHTML = ""
             }
 
@@ -46,6 +50,8 @@ function checar() {
                 document.getElementById("videofundo").load();
                 document.getElementById("container").style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/0%2C%2C16041675-FMM%2C00.jpg)";
                 document.getElementById("resultado").innerHTML = "<span style='color: red; font-size: 70px'>Ferrou!</span>";
+                document.getElementById("consultar").style.display = "none";
+                document.getElementById("gps").style.display = "none";
                 document.getElementById("texto").innerHTML = ""
             }
         })

@@ -18,8 +18,20 @@
         border: 2px solid rgba(0, 0, 0, 0.447);
         border-radius: 5px;
         background-color: rgba(199, 189, 189, 0);
-        width: 200px;
-        height: 150px;
+        width: 350px;
+        height: 200px;
+    }
+
+    #gps {
+        border-radius: 30px;
+        border-width: 1px;
+        height: 25px;
+        width: 110px;
+        background-color: rgb(224, 224, 224);
+    }
+
+    #gps:active {
+        background-color: rgb(86, 86, 86);
     }
 
     #consultar {
@@ -49,7 +61,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;       
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
     }
 
@@ -64,35 +76,47 @@
         border: 2px solid rgba(0, 0, 0, 0.353);
         border-radius: 5px;
         background-color: rgba(199, 189, 189, 0);
-        width: 200px;
+        width: 250px;
         height: 150px;
         background-size: cover;
+        
 
 
 
     }
 
-    #consultar {
+    #gps {
         border-radius: 30px;
         border-width: 1px;
-        background-color: rgb(224, 224, 224);
         height: 25px;
-        width: 80px;
+        width: 110px;
+        background-color: rgb(224, 224, 224);
     }
 
-    #consultar:active{
+    #gps:active {
         background-color: rgb(86, 86, 86);
     }
 
-    #videofundo {
-        object-fit: cover;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
+        #consultar {
+            border-radius: 30px;
+            border-width: 1px;
+            background-color: rgb(224, 224, 224);
+            height: 25px;
+            width: 80px;
+        }
 
+        #consultar:active {
+            background-color: rgb(86, 86, 86);
+        }
+
+        #videofundo {
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+        }
     }
-}
-
