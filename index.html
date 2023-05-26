@@ -7,8 +7,7 @@
     <meta name="description" content="Previsão de chuva para motoboys">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image"
-        content="https://kaupalph.sirv.com/Imagens/imagens/logo4.jpg" />
+    <meta property="og:image" content="https://kaupalph.sirv.com/Imagens/imagens/logo4.jpg" />
     <title>Vai chover hoje?</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3248/3248333.png">
     <link rel="stylesheet" href="estilos.css">
@@ -18,7 +17,7 @@
 
 <body>
     <main>
-        <video autoplay muted loop id="videofundo">
+        <video autoplay muted playsinline loop id="videofundo">
             <source id="fontevideo"
                 src="https://kaupalph.sirv.com/cortados/pexels-cottonbro-studio-4605197-960x506-25fps.mp4"
                 type="video/mp4">
@@ -27,20 +26,13 @@
         <div id="container">
             <h1 id="texto">Vai chover hoje?</h1>
             <button type="button" onclick="checar()" id="consultar">Consultar</button><br>
-           <a href="mapa.html"> <button  id="gps">Ver mapa</button></a>
+            <a href="mapa.html"> <button id="gps">Ver mapa</button></a>
         </div>
         <h3 id="resultado"></h3>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-              var video = document.getElementById('videofundo');
-              video.play();
-            });
-          </script>
     </main>
 
     <footer>
     </footer>
 </body>
 
-</html>
+</html
