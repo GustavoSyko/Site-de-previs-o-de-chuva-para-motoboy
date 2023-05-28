@@ -1,9 +1,12 @@
+document.getElementById("container").style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/5e41ad5fcde5ffc3c124d0658d8e254f2d64a6c3_hq.gif)";
+
 function checar() {
     const url = `https://api.hgbrasil.com/weather?format=json-cors&key=f3535208&user_ip=remote`;
     fetch(url)
         .then(response => response.json())
         .then(data => {
             const chuva = data.results.forecast[0].rain_probability;
+            
             //Se a porcentagem de chuva for menor ou igual a 10, Dê a seguinte resposta e coloque tal video de fundo
             if (chuva <= 10) {
                 document.getElementById("fontevideo").src = "https://kaupalph.sirv.com/cortados/sky_-_52170%20(1080p).mp4";
@@ -49,7 +52,7 @@ function checar() {
                 document.getElementById("fontevideo").src = "https://kaupalph.sirv.com/cortados/pexels-the-element-2657691-960x540-30fps.mp4";
                 document.getElementById("videofundo").load();
                 document.getElementById("container").style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/0%2C%2C16041675-FMM%2C00.jpg)";
-                document.getElementById("resultado").innerHTML = "<span style='color: red; font-size: 70px'>Ferrou!</span>";
+                document.getElementById("resultado").innerHTML = ` Ferrou! ${chuva} %.`
                 document.getElementById("consultar").style.display = "none";
                 document.getElementById("gps").style.display = "none";
                 document.getElementById("texto").innerHTML = ""
