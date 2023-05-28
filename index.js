@@ -1,4 +1,6 @@
 document.getElementById("container").style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/5e41ad5fcde5ffc3c124d0658d8e254f2d64a6c3_hq.gif)";
+var recarregar = document.getElementById("recarregar");
+
 
 function checar() {
     const url = `https://api.hgbrasil.com/weather?format=json-cors&key=f3535208&user_ip=remote`;
@@ -15,7 +17,9 @@ function checar() {
                 document.getElementById("resultado").innerHTML = `Não , probabilidade de chuva é de ${chuva} %.`
                 document.getElementById("consultar").style.display = "none";
                 document.getElementById("gps").style.display = "none";
-                document.getElementById("texto").innerHTML = ""
+                document.getElementById("texto").innerHTML = "";
+                document.getElementById("recarregar").style.display = "block";
+                
             }
 
             else if (chuva > 10 && chuva <= 30) {
@@ -26,6 +30,7 @@ function checar() {
                 document.getElementById("consultar").style.display = "none";
                 document.getElementById("gps").style.display = "none";
                 document.getElementById("texto").innerHTML = ""
+                document.getElementById("recarregar").style.display = "block";
             }
 
             else if (chuva > 30 && chuva <= 60) {
@@ -36,6 +41,7 @@ function checar() {
                 document.getElementById("consultar").style.display = "none";
                 document.getElementById("gps").style.display = "none";
                 document.getElementById("texto").innerHTML = ""
+                document.getElementById("recarregar").style.display = "block";
             }
 
             else if (chuva > 60 && chuva <= 80) {
@@ -46,16 +52,18 @@ function checar() {
                 document.getElementById("consultar").style.display = "none";
                 document.getElementById("gps").style.display = "none";
                 document.getElementById("texto").innerHTML = ""
+                document.getElementById("recarregar").style.display = "block";
             }
 
             else if (chuva > 80 && chuva <= 100) {
                 document.getElementById("fontevideo").src = "https://kaupalph.sirv.com/cortados/pexels-the-element-2657691-960x540-30fps.mp4";
                 document.getElementById("videofundo").load();
                 document.getElementById("container").style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/0%2C%2C16041675-FMM%2C00.jpg)";
-                document.getElementById("resultado").innerHTML = ` Ferrou! ${chuva} %.`
+                document.getElementById("resultado").innerHTML = ` Ferrou !  ${chuva} %.`
                 document.getElementById("consultar").style.display = "none";
                 document.getElementById("gps").style.display = "none";
                 document.getElementById("texto").innerHTML = ""
+                document.getElementById("recarregar").style.display = "block";
             }
         })
 
@@ -64,3 +72,7 @@ function checar() {
             console.error('Ocorreu um erro ao tentar obter os dados da API:', error);
         });
 }
+
+function recarregar() {
+    location.reload();
+  }
