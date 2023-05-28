@@ -13,5 +13,25 @@ body , html{
     
 }
 
-  
+#botoes{
+    
+    position: fixed;
+    bottom: 2;
+}
+
+#pesquisa{
+    
+    border: rgba(0, 0, 0, 0.333) 3px ridge;
+    border-radius: 10px;
+}
+
+#procurar, #limpar {
+    background-color: rgba(255, 226, 190, 0.399);
+    border: rgba(0, 0, 0, 0.33) 2px ridge;
+    border-radius: 5px;
+}
+
+#procurar:active, #limpar:active {
+    background-color: rgb(100, 100, 100);
+}
 
