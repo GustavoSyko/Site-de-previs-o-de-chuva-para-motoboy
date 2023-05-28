@@ -1,6 +1,6 @@
 // Script de carregamento dinamico, poderia ser no html de forma "inline" .
 var script = document.createElement('script');
-script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDAJdRWpW9nH3RAAMz5dq2F9lCUT4aM3nA&callback=initMap';
+script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDAJdRWpW9nH3RAAMz5dq2F9lCUT4aM3nA&libraries=places&callback=initMap';
 script.async = true;
 document.head.appendChild(script);
 
@@ -8,7 +8,7 @@ let map;
 let marker;
 let geocoder;
 let infoWindow;
-
+let autocomplete;
 
 
 function initMap() {
@@ -110,7 +110,24 @@ function initMap() {
     navigator.geolocation.getCurrentPosition(function (position) {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
-      map.setCenter({ lat: latitude, lng: longitude });
+      // Criar marcador para a localização atual do usuário
+      var userLocation = new google.maps.LatLng(latitude, longitude);
+      var userMarker = new google.maps.Marker({
+        position: userLocation,
+        map: map,
+        title: 'Você'
+      });
+
+      // Criar a janela de informação para exibir "Você"
+      var infoWindow = new google.maps.InfoWindow({
+        content: 'Você'
+      });
+
+      // Abrir a janela de informação acima do marcador
+      infoWindow.open(map, userMarker);
+
+      // Centralizar o mapa na localização atual do usuário
+      map.setCenter(userLocation);
     }, function (error) {
       console.log("Erro ao obter a localização do usuário:", error);
     });
@@ -128,11 +145,59 @@ function initMap() {
   const submitButton = document.getElementById("procurar");
   const clearButton = document.getElementById("limpar");
 
+  // Cria um objeto de opções para o Autocomplete
+  var autocompleteOptions = {
+    types: ["address"], // Define o tipo de sugestões para endereços
+    componentRestrictions: { country: "br",  }, // Restringe as sugestões ao Brasil
+    bounds: new google.maps.LatLngBounds(
+      new google.maps.LatLng(-26.992644, -49.092737), // Canto sudoeste de Blumenau
+      new google.maps.LatLng(-26.841561, -49.000334)  // Canto nordeste de Blumenau
+    )
+  };
+
+  // Cria um novo objeto Autocomplete vinculado ao campo de entrada de texto
+  autocomplete = new google.maps.places.Autocomplete(
+    inputText,
+    autocompleteOptions
+  );
+
+  // Define o campo de entrada como parte do formulário
+  autocomplete.setFields(["address_component", "geometry"]);
+
+  // Evento acionado quando uma sugestão é selecionada
+  autocomplete.addListener("place_changed", function () {
+    var place = autocomplete.getPlace();
+    if (!place.geometry) {
+      window.alert("Nenhum local encontrado para o endereço selecionado.");
+      return;
+    }
+
+    // Centraliza o mapa no local selecionado
+    map.setCenter(place.geometry.location);
+
+    // Remove o marcador anterior, se houver
+    if (marker) {
+      marker.setMap(null);
+    }
+
+    // Cria um novo marcador no local selecionado
+    marker = new google.maps.Marker({
+      position: place.geometry.location,
+      map: map,
+    });
+
+    // Configura a caixa de informações do marcador
+    infoWindow.setContent(place.formatted_address);
+    infoWindow.open(map, marker,);
+  });
+
 
   // Inserindo a div "botoes" para baixo do mapa.
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(botoes);
+  map.controls[google.maps.ControlPosition.LEFT_TOP].push(botoes);
   // Dando uma margem para esta div.
-  botoes.style.marginTop = '60px';
+  botoes.style.marginTop = '0';
+  
+
 
   // Colocando marcador no mapa.
   marker = new google.maps.Marker({
@@ -156,6 +221,14 @@ function initMap() {
 // Função para limpar o mapa.
 function clear() {
   marker.setMap(null);
+  document.getElementById("pesquisa").value =""
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      map.setCenter({ lat: latitude, lng: longitude });
+    })}
+  
 
 }
 // Função  fetch() que faz todo o processo de pegar informação do json especifica
