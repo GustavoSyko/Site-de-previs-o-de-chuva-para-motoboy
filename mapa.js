@@ -195,7 +195,7 @@ function initMap() {
   // Inserindo a div "botoes" para baixo do mapa.
   map.controls[google.maps.ControlPosition.LEFT_TOP].push(botoes);
   // Dando uma margem para esta div.
-  botoes.style.marginTop = '0';
+  botoes.style.marginTop = '5%';
   
 
 

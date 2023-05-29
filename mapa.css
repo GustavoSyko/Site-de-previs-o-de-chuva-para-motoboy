@@ -15,20 +15,19 @@ html {
 
 }
 
-#botoes {
-
-    position: fixed;
-    bottom: 2;
-}
 
 #pesquisa {
-    width: 210px;
+    text-align: center;
+    font-size: large;
+    height: 5vh;
+    width:67vw;
     border: rgba(0, 0, 0, 0.333) 3px ridge;
     border-radius: 10px;
 }
 
 #procurar,#limpar {
-    width: 45px;
+    height: 5vh;
+    width: 14vw;
     background-color: rgba(227, 212, 177, 0.788);
     border: rgba(0, 0, 0, 0.33) 2px ridge;
     border-radius: 5px;
