@@ -222,12 +222,7 @@ function initMap() {
 function clear() {
   marker.setMap(null);
   document.getElementById("pesquisa").value =""
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      const latitude = position.coords.latitude;
-      const longitude = position.coords.longitude;
-      map.setCenter({ lat: latitude, lng: longitude });
-    })}
+  
   
 
 }
