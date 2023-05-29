@@ -150,8 +150,8 @@ function initMap() {
     types: ["address"], // Define o tipo de sugestões para endereços
     componentRestrictions: { country: "br",  }, // Restringe as sugestões ao Brasil
     bounds: new google.maps.LatLngBounds(
-      new google.maps.LatLng(-26.992644, -49.092737), // Canto sudoeste de Blumenau
-      new google.maps.LatLng(-26.850110, -49.160035)  // Canto nordeste de Blumenau
+      new google.maps.LatLng(-26.952404, -49.177592), // Canto sudoeste de Blumenau
+      new google.maps.LatLng(-26.824723, -49.050159)  // Canto nordeste de Blumenau
     )
   };
 
