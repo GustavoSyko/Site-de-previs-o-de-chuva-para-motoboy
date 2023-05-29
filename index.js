@@ -8,7 +8,7 @@ function checar() {
         .then(response => response.json())
         .then(data => {
             const chuva = data.results.forecast[0].rain_probability;
-            
+
             //Se a porcentagem de chuva for menor ou igual a 10, Dê a seguinte resposta e coloque tal video de fundo
             if (chuva <= 10) {
                 document.getElementById("fontevideo").src = "https://kaupalph.sirv.com/cortados/sky_-_52170%20(1080p).mp4";
@@ -19,7 +19,7 @@ function checar() {
                 document.getElementById("gps").style.display = "none";
                 document.getElementById("texto").innerHTML = "";
                 document.getElementById("recarregar").style.display = "block";
-                
+
             }
 
             else if (chuva > 10 && chuva <= 30) {
@@ -60,6 +60,7 @@ function checar() {
                 document.getElementById("videofundo").load();
                 document.getElementById("container").style.backgroundImage = "url(https://kaupalph.sirv.com/Imagens/imagens/0%2C%2C16041675-FMM%2C00.jpg)";
                 document.getElementById("resultado").innerHTML = ` Ferrou !  ${chuva} %.`
+                document.getElementById("resultado").style.color = "red";
                 document.getElementById("consultar").style.display = "none";
                 document.getElementById("gps").style.display = "none";
                 document.getElementById("texto").innerHTML = ""
@@ -75,4 +76,4 @@ function checar() {
 
 function recarregar() {
     location.reload();
-  }
+}
