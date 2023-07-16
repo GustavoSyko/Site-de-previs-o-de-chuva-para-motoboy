@@ -11,12 +11,12 @@
     }
 
     #container {
-        background-size: cover;
+        background-size: cover ;
         background-position: bottom;
         background-color: rgba(199, 189, 189, 0);
         margin: auto;
-        width: 420px;
-        height: 250px;
+        width: 350px;
+        height: 220px;
         display: block;
         text-align: center;
         justify-content: center;
@@ -103,8 +103,9 @@
         border: 2px solid rgba(0, 0, 0, 0.353);
         border-radius: 5px;
         background-color: rgba(199, 189, 189, 0);
-        min-width: 20vw;
-        min-height: 45vw;
+        width: 250px;
+        height: 150px;
+       display: block;
         background-size: cover;
         background-position: bottom;
     }
